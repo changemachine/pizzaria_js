@@ -1,41 +1,30 @@
-var Pizza = {
-    type: '',
-    price: 0,
-    pizzaPrice: function(type) {
-        if (type === 'cheese') {
-            price = "$1.10";
-        } else if (type = 'pepperoni') {
-            price = "$1.38";
+    var Pizza = {
+        price: 0,
+        pizzaType: '',
+        pizzaPrice: function(type) {
+            console.log(type);
+            if (type === 'cheese') {
+                this.price = 1.10;
+            } else if(type === 'pepperoni') {
+                this.price = 1.30;
+            }
         }
-        this.price = ;
-    }
-};
+    };
 
-
-
-
-jQuery(document).ready(function() {
-    // $("#cheesePizza").focus();
-
-    $("#pizza-form").submit(function(event) {
-
-// GRAB INPUT
-
-
-        //var sides_input = document.getElementsByClassName( 'sides' ),
-        //     sides  = [].map.call(sides_input, function( input ) {
-        //         return input.value;
-        // });
-
-// OPERATE ON INPUT
-    var theResults = functionName(input);
-
-// DISPLAY RESULTS
-        $('#dispayElement').html("<h1><span>" + variableName + "</span></h1>");
-
-
-
-        $("#result").show();
+$(document).ready(function() {
+    $("#order-form").submit(function(event) {
         event.preventDefault();
+        var pizzaType = $('select#pizza-type');
+
+        console.log(pizzaType);//--------!
+
+        newPizza = Object.create(Pizza);
+        newPizza.pizzaType = pizzaType;
+
+        $("#pizza-price").text(newPizza.price.toLocaleString());
+        $("#pizza-price").show();
+        $("#order-form").hide();
     });
+debugger;
+
 });

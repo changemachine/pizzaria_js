@@ -1,15 +1,18 @@
-/*
-Create a website where a user can:
-- choose between cheese and pepperoni.
-- Get the cost of a pizza depending on type. (Create a method for cost).
-*/
-
-describe('getWordOrder', function() {
-    it("returns '$10' when Cheese Pizza is selected)", function() {
-        expect(pizzaOrder(["cheese"])).to.equal('$10');
+describe("PizzaOrder", function() {
+    describe("pizzaPrice", function() {
+        it("returns 1.10 for a cheese pizza", function() {
+            var testPizza = Object.create(PizzaOrder);
+            testPizza.pizzaPrice('cheese');
+            expect('cheese').to.equal(1.10);
+        });
     });
 
-
-
+    describe("pizzaPrice", function() {
+        it("returns 1.30 for a pepperoni pizza", function() {
+            var testPizza = Object.create(PizzaOrder);
+            testPizza.withdraw(1.30);
+            expect(testPizza.balance).to.equal(1.30);
+        });
+    });
 
 });
