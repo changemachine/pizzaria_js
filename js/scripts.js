@@ -1,11 +1,13 @@
 var Pizza = {
     type: '',
+    price: 0,
     pizzaPrice: function(type) {
         if (type === 'cheese') {
-            return "$1.00";
+            price = "$1.10";
         } else if (type = 'pepperoni') {
-            return "$1.38";
+            price = "$1.38";
         }
+        this.price = ;
     }
 };
 
@@ -13,14 +15,13 @@ var Pizza = {
 
 
 jQuery(document).ready(function() {
-    $("#topping1").focus();
+    // $("#cheesePizza").focus();
 
-    $("#triangle-sides").submit(function(event) {
+    $("#pizza-form").submit(function(event) {
 
 // GRAB INPUT
 
-        // get'em: var ___ = doc.getElsByCLASSname('class'),
-        // load'em: sides = [].map.call(sides_input, func( input ) { return input.value; });
+
         //var sides_input = document.getElementsByClassName( 'sides' ),
         //     sides  = [].map.call(sides_input, function( input ) {
         //         return input.value;

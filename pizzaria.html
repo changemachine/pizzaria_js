@@ -12,10 +12,25 @@
       <h1>Welcome to Pizzaria. Choose a pizza.</h1>
 
       <form id="pizza-order">
-        <div class="form-group">
-          <input id="topping1" name='toppings[]' class='toppings' type="text" placeholder='Tuna' value='tuna' required>
-
+        <div>
+            <select>
+                <option id="cheesePizza" class='toppings'>A Cheese Pizza</option>
+                <option id="Pepperonies" class='toppings'>Pepperonies</option>
+            </select>
         </div>
+
+        <!-- <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            Action <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+              <ul class="dropdown-menu" role="menu">
+                  <li id='cheese'>A cheese pizza</li>
+                  <li id='pepperoni'>A pepperoni pizza</li>
+              </ul>
+          </ul>
+        </div> -->
+
         <button type="submit" class="btn btn-info">Submit</button>
       </form>
 
