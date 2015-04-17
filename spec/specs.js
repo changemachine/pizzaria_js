@@ -1,18 +1,11 @@
 describe("PizzaOrder", function() {
-    describe("pizzaPrice", function() {
-        it("returns 1.10 for a cheese pizza", function() {
-            var testPizza = Object.create(PizzaOrder);
-            testPizza.pizzaPrice('cheese');
-            expect('cheese').to.equal(1.10);
+    describe("chzPlus", function() {
+        it("returns a total: 1 for 1 cheese pizza", function() {
+            var testPizzaOrder = Object.create(PizzaOrder);
+            testPizzaOrder.chzPlus(1);
+            expect(testPizzaOrder.total).to.equal(1);
         });
     });
 
-    describe("pizzaPrice", function() {
-        it("returns 1.30 for a pepperoni pizza", function() {
-            var testPizza = Object.create(PizzaOrder);
-            testPizza.withdraw(1.30);
-            expect(testPizza.balance).to.equal(1.30);
-        });
-    });
 
 });
